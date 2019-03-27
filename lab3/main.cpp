@@ -45,7 +45,7 @@ int main(int argc, char** argv) {
         figure = make_shared<Rectangle> (Rectangle(a, b));
 			}
 			if (f == 2) {
-				cout << "Enter side and height:" << endl;
+				cout << "Enter diag a and diag b:" << endl;
 				int a, h;
 				cin >> a >> h;
 				figure = make_shared<Rhombus> (Rhombus(a, h));
@@ -72,7 +72,7 @@ int main(int argc, char** argv) {
         figure = make_shared<Rectangle> (Rectangle(a, b));
 			}
 			if (f == 2) {
-				cout << "Enter side and height:" << endl;
+				cout << "Enter diag a and diag b:" << endl;
 				int a, h;
 				cin >> a >> h;
 				figure = make_shared<Rhombus> (Rhombus(a, h));
@@ -99,7 +99,7 @@ int main(int argc, char** argv) {
         figure = make_shared<Rectangle> (Rectangle(a, b));
 			}
 			if (f == 2) {
-				cout << "Enter side and height:" << endl;
+				cout << "Enter diag a and diag b:" << endl;
 				int a, h;
 				cin >> a >> h;
 				figure = make_shared<Rhombus> (Rhombus(a, h));
