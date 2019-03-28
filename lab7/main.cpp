@@ -14,45 +14,43 @@
 
 using namespace std;
 
-
-int main(int argc, char** argv) {
-	int a, b, c;
-	int Fig;
-
-	TList<TQueue<Figure>, Figure> list;
-
-	while (true) {
-		int flag = 0;
-		int flag2 = 0;
-		int flag3 = 0;
-		int amounts = 0;
-		cout << "Menu:" << endl;
+void PrintMenu() {
+    cout << "Menu:" << endl;
+    cout << "0. Print Menu" << endl;
 		cout << "1. Add" << endl;
 		cout << "2. Pop" << endl;
-		cout << "3. Destructor" << endl;
-		cout << "4. Print Container" << endl;
+		cout << "3. Delete" << endl;
+		cout << "4. Print List" << endl;
 		cout << "5. Get Square" << endl;
 		cout << "6. Exit" << endl;
+}
 
+int main(int argc, char** argv) {
+	TList<TQueue<Figure>, Figure> list;
+  PrintMenu();
+	while (true) {
+    cout << ':';
+		int flag = 0;
 		cin >> flag;
-
+    if (flag == 0) {PrintMenu();}
 		if (flag == 1) {
 			cout << "How many elements?" << endl;
-			cin >> amounts;
-			for (int i = 0; i < amounts; ++i) {
-				cout << "Choose Figure:" << endl;
+			int k = 0;
+			cin >> k;
+			for (int i = 0; i < k; ++i) {
 				cout << "1. Rectangle" << endl;
 				cout << "2. Rhombus" << endl;
 				cout << "3. Trapezium:" << endl;
+				int Fig, a, b, c;
 				cin >> Fig;
 				if (Fig == 1) {
-					cout << "Enter side a and side b:" << endl;
+					cout << "Enter Rectangle:" << endl;
 				}
 				if (Fig == 2) {
-					cout << "Enter diag a and diag b:" << endl;
+					cout << "Enter Rhombus:" << endl;
 				}
 				if (Fig == 3) {
-					cout << "Enter base a, base b and height:" << endl;
+					cout << "Enter Trapezium:" << endl;
 				}
 				cin >> a >> b;
 				if (Fig == 3) cin >> c;
@@ -64,6 +62,8 @@ int main(int argc, char** argv) {
 		if (flag == 2) {
 			cout << "1. By type" << endl;
 			cout << "2. By square (below)" << endl;
+      int flag2 = 0;
+      int flag3 = 0;
 			cin >> flag2;
 			if (flag2 == 1) {
 				cout << "1. All Rectangles" << endl;
@@ -96,17 +96,17 @@ int main(int argc, char** argv) {
 				list.RemoveSubitem(&criteria);
 		}
 		if (flag == 4) {
-			cout << "Container:" << endl;
+			cout << "List:" << endl;
 			cout << list << endl;
 		}
 		if (flag == 5) {
 			int position;
 			int position2;
-			cout << "Enter Container:" << endl;
+			cout << "Enter List item position:" << endl;
 			cin >> position;
 			if (position >= 1 && position <= list.GetSize()) {
 				TQueue<Figure> CurQueue = list.GetElement(position);
-				cout << "Enter Position:" << endl;
+				cout << "Enter Queue item position:" << endl;
 				cin >> position2;
 				if (position2 >= 1 && position2 <= CurQueue.GetCount()) {
 					TQueueItem<Figure> CurElement = CurQueue.GetElement(position2);
@@ -122,7 +122,7 @@ int main(int argc, char** argv) {
 		}
 		if (flag == 6) {
 			list.~TList();
-			return 0;
+			break;
 		}
 		else {}
 
