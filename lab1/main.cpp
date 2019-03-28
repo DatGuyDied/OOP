@@ -9,7 +9,11 @@ int main(int argc, char** argv)
 {
   Figure *ptr;
   while(true) {
-    cout << "Menu: \n1. Rectangle \n2. Trapeze\n3. Rhombus\n4. Exit" << endl;;
+    cout << "Menu:" << endl;
+    cout << "1. Rectangle" << endl;
+    cout << "2. Trapeze" << endl;
+    cout << "3. Rhombus" << endl;
+    cout << "4. Exit" << endl;
     int s;
     while(true) {
       cin >> s;
