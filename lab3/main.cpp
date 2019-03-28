@@ -39,19 +39,19 @@ int main(int argc, char** argv) {
 			cout << "3. Trapeze" << endl;;
 			cin >> f;
 			if (f == 1) {
-				cout << "Enter side a and side b:" << endl;
+				cout << "Enter Rectangle:" << endl;
 				int a, b;
 				cin >> a >> b;
         figure = make_shared<Rectangle> (Rectangle(a, b));
 			}
 			if (f == 2) {
-				cout << "Enter diag a and diag b:" << endl;
+				cout << "Enter Rhombus:" << endl;
 				int a, h;
 				cin >> a >> h;
 				figure = make_shared<Rhombus> (Rhombus(a, h));
 			}
 			if (f == 3) {
-				cout << "Enter side a, side b and height:" << endl;
+				cout << "Enter Trapeze:" << endl;
 				int a, b, h;
 				cin >> a >> b >> h;
 				figure = make_shared<Trapeze> (Trapeze(a, b, h));
@@ -66,19 +66,19 @@ int main(int argc, char** argv) {
 			cout << "3. Trapeze" << endl;;
 			cin >> f;
 			if (f == 1) {
-				cout << "Enter side a and side b:" << endl;
+				cout << "Enter Rectangle:" << endl;
 				int a, b;
 				cin >> a >> b;
         figure = make_shared<Rectangle> (Rectangle(a, b));
 			}
 			if (f == 2) {
-				cout << "Enter diag a and diag b:" << endl;
+				cout << "Enter Rhombus:" << endl;
 				int a, h;
 				cin >> a >> h;
 				figure = make_shared<Rhombus> (Rhombus(a, h));
 			}
 			if (f == 3) {
-				cout << "Enter side a, side b and height:" << endl;
+				cout << "Enter Trapeze:" << endl;
 				int a, b, h;
 				cin >> a >> b >> h;
 				figure = make_shared<Trapeze> (Trapeze(a, b, h));
@@ -93,19 +93,19 @@ int main(int argc, char** argv) {
 			cout << "3. Trapeze" << endl;;
 			cin >> f;
 			if (f == 1) {
-				cout << "Enter side a and side b:" << endl;
+				cout << "Enter Rectangle:" << endl;
 				int a, b;
 				cin >> a >> b;
         figure = make_shared<Rectangle> (Rectangle(a, b));
 			}
 			if (f == 2) {
-				cout << "Enter diag a and diag b:" << endl;
+				cout << "Enter Rhombus:" << endl;
 				int a, h;
 				cin >> a >> h;
 				figure = make_shared<Rhombus> (Rhombus(a, h));
 			}
 			if (f == 3) {
-				cout << "Enter side a, side b and height:" << endl;
+				cout << "Enter Trapeze:" << endl;
 				int a, b, h;
 				cin >> a >> b >> h;
 				figure = make_shared<Trapeze> (Trapeze(a, b, h));
