@@ -18,7 +18,7 @@ void PrintMenu(){
   cout << "0. Print Menu" << endl;
   cout << "1. Add" << endl;
 	cout << "2. Pop" << endl;
-	cout << "3. Destructor" << endl;
+	cout << "3. Delete" << endl;
 	cout << "4. Print List" << endl;
 	cout << "5. Print Square" << endl;
 	cout << "6. Add Random Elements" << endl;
@@ -53,77 +53,74 @@ int main(int argc, char** argv)
 			int k;
 			cin >> k;
 			for (int i = 0; i < k; i++) {
-				cout << "1. Push Front" << endl;
+				cout << "1. Push front" << endl;
 				cout << "2. Push back" << endl;
 				cout << "3. Insert" << endl;
 				cin >> flag2;
 				if (flag2 == 1) {
-					cout << "Choose Figure:" << endl;
 					cout << "1. Rectangle" << endl;
 					cout << "2. Rhombus" << endl;
 					cout << "3. Trapeze" << endl;
 					cin >> Fig;
 					if (Fig == 1) {
-						cout << "Enter side a and side b:" << endl;
+						cout << "Enter Rectangle:" << endl;
 					}
 					if (Fig == 2) {
-						cout << "Enter diag a and diag b:" << endl;
+						cout << "Enter Rhombus:" << endl;
 					}
 					if (Fig == 3) {
-						cout << "Enter base a, base b and height:" << endl;
+						cout << "Enter Trapeze:" << endl;
 					}
 					cin >> a >> b;
-					if (Fig == 3) cin >> c;
-					if (Fig == 1) f = make_shared<Rectangle>(Rectangle(a, b));
-					if (Fig == 2) f = make_shared<Rhombus>(Rhombus(a, b));
-					if (Fig == 3) f = make_shared<Trapeze>(Trapeze(a, b, c));
+					if (Fig == 3) {cin >> c;}
+					if (Fig == 1) {f = make_shared<Rectangle>(Rectangle(a, b));}
+					if (Fig == 2) {f = make_shared<Rhombus>(Rhombus(a, b));}
+					if (Fig == 3) {f = make_shared<Trapeze>(Trapeze(a, b, c));}
 					list.push_f(move(f));
 				}
 				if (flag2 == 2) {
-					cout << "Choose Figure:" << endl;
 					cout << "1. Rectangle" << endl;
 					cout << "2. Rhombus" << endl;
 					cout << "3. Trapeze" << endl;
 					cin >> Fig;
 					if (Fig == 1) {
-						cout << "Enter side a and side b:" << endl;
+						cout << "Enter Rectangle:" << endl;
 					}
 					if (Fig == 2) {
-						cout << "Enter diag a and diag b:" << endl;
+						cout << "Enter Rhombus:" << endl;
 					}
 					if (Fig == 3) {
-						cout << "Enter base a, base b and height:" << endl;
+						cout << "Enter Trapeze:" << endl;
 					}
 					cin >> a >> b;
-					if (Fig == 3) cin >> c;
-					if (Fig == 1) f = make_shared<Rectangle>(Rectangle(a, b));
-					if (Fig == 2) f = make_shared<Rhombus>(Rhombus(a, b));
-					if (Fig == 3) f = make_shared<Trapeze>(Trapeze(a, b, c));
+					if (Fig == 3) {cin >> c;}
+					if (Fig == 1) {f = make_shared<Rectangle>(Rectangle(a, b));}
+					if (Fig == 2) {f = make_shared<Rhombus>(Rhombus(a, b));}
+					if (Fig == 3) {f = make_shared<Trapeze>(Trapeze(a, b, c));}
 					list.push_b(move(f));
 				}
 				if (flag2 == 3) {
-					cout << "Choose Figure:" << endl;
 					cout << "1. Rectangle" << endl;
 					cout << "2. Rhombus" << endl;
 					cout << "3. Trapeze" << endl;
 					cin >> Fig;
 					if (Fig == 1) {
-						cout << "Enter side a and side b:" << endl;
+						cout << "Enter Rectangle:" << endl;
 					}
 					if (Fig == 2) {
-						cout << "Enter diag a and diag b:" << endl;
+						cout << "Enter Rhombus:" << endl;
 					}
 					if (Fig == 3) {
-						cout << "Enter base a, base b and height:" << endl;
+						cout << "Enter Trapeze:" << endl;
 					}
 					cin >> a >> b;
-					if (Fig == 3) cin >> c;
-					if (Fig == 1) f = make_shared<Rectangle>(Rectangle(a, b));
-					if (Fig == 2) f = make_shared<Rhombus>(Rhombus(a, b));
-					if (Fig == 3) f = make_shared<Trapeze>(Trapeze(a, b, c));
+					if (Fig == 3) {cin >> c;}
+					if (Fig == 1) {f = make_shared<Rectangle>(Rectangle(a, b));}
+					if (Fig == 2) {f = make_shared<Rhombus>(Rhombus(a, b));}
+					if (Fig == 3) {f = make_shared<Trapeze>(Trapeze(a, b, c));}
 					if (Fig <= 3) {
 						int p;
-						cout << "Set p:" << endl;
+						cout << "Enter position:" << endl;
 						cin >> p;
 						list.ins(move(f), p);
 					}
@@ -132,7 +129,7 @@ int main(int argc, char** argv)
 		}
 		if (flag == 2) {
 			int p;
-			cout << "Set p:" << endl;
+			cout << "Enter position:" << endl;
 			cin >> p;
 			list.pop(p);
 		}
